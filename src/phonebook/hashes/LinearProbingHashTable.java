@@ -185,8 +185,6 @@ public class LinearProbingHashTable extends OpenAddressingHashTable {
 
     public int resizeSoft(KVPair[] oldTable, KVPair[] newTable){
         int probes = 0;
-
-
         for (int i = 0; i<oldTable.length; i++){
                 if (oldTable[i] != null && oldTable[i] != TOMBSTONE){//only insert real elements, not tombstones
                     KVPair temp = oldTable[i];
@@ -212,8 +210,6 @@ public class LinearProbingHashTable extends OpenAddressingHashTable {
                         }
 
                     }
-
-
                 }
                 probes++;
 
